@@ -38,20 +38,23 @@ cd $dossier
 sudo touch README.md
 sudo git init
 
+
+
 # --- Création du repo distant
 sudo curl -u $user:$pass https://api.github.com/user/repos -d '{"name":"'$dossier'"}'
 
 
-echo "Création du dossier $dossier à l'emplacement $chemin : OK"
-echo ""
-echo "Création du repo distant $dossier : OK"
 
+# ---- Message de validation des opérations
 echo -ne '#####                     (33%)\r'
 sleep 1
 echo -ne '#############             (66%)\r'
 sleep 1
 echo -ne '#######################   (100%)\r'
 echo -ne '\n'
+echo "Création du dossier $dossier à l'emplacement $chemin : OK"
+echo ""
+echo "Création du repo distant $dossier : OK"
 
 
 # ---- GITHUB
